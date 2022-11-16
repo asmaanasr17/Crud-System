@@ -1,0 +1,64 @@
+
+<html >
+<head>
+  <title>Crud System</title>
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- #2a8a85 -->
+</head>
+<body>
+      <header>
+        <div class="container-fluid text-center text-white  bg-dark  py-3">
+            <h1>CRUD System</h1>
+           </div> 
+           <div class="store  text-center  py-1  "> 
+            <h5>Products Store</h5>
+           </div>
+      </header>
+  <section>
+    <div class="container   w-75 mx-auto my-3 p-4 shadow rounded  py-3">
+        <label for="productNameInp"> Product Name</label> <span class="text-danger"> *</span>
+         <input id="productNameInp"  class="form-control"  required  >
+         <div id="nameAlert" class="alert alert-danger p-2 mt-2 d-none">Name Required  </div>
+
+
+         <label for="productPriceInp"> Product Price</label> <span class="text-danger"> *</span>
+         <input id="productPriceInp"  class="form-control"  type="number"  required>
+
+         <label for="productCategoryInp"> Category Name</label> <span class="text-danger"> *</span>
+         <input id="productCategoryInp"  class="form-control"  required  >
+
+         <label for="productDescInp"> Product Description</label> <span class="text-danger"> *</span>
+         <input id="productDescInp"  class="form-control"  required >
+         <button  disabled  id="addbtn" class="btn btn-outline-dark rounded-pill  mt-3  "> Add Product</button>
+         
+
+    </div>
+  </section >
+ <section   class="product  text-center w-75 mx-auto my-3 p-4 shadow rounded  py-3">
+     <div class="container">
+        <input onkeyup="search(this.value)" id="searchInp" class="form-control shadow" placeholder="Search By Name.. ">
+
+        <table  class="table    font-weight-bold  table-striped mt-3 text-dark tableData  ">
+            <thead>
+           
+            <td>Name</td>
+            <td>Price</td>
+            <td>Category</td>
+            <td>Description</td>
+            <td>Update</td>
+            <td>Delete</td>
+            </thead>
+            <tbody  id="tabledata">
+               
+            </tbody>
+         </table>
+     </div>
+
+    
+ </section>
+
+    <script  src="main.js"></script>
+</body>
+</html>
